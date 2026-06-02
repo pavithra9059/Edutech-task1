@@ -3,7 +3,7 @@ Project Overview
 Cosmic Knowledge Hub is a futuristic educational web platform designed using HTML5, CSS3, and JavaScript. The project combines modern UI/UX principles with animated visual effects to create an engaging learning environment inspired by space exploration.
 The website demonstrates the use of semantic HTML, responsive layouts, CSS variables, animated backgrounds, interactive components, and JavaScript functionality.
 
---> Features
+* Features
 --> Modern User Interface
 -->Animated gradient background
 -->Floating stars effect
