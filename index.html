@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmic Knowledge Hub</title>
+</head>
+<body>
+<div class="stars"></div>
+<div class="planet p1"></div>
+<div class="planet p2"></div>
+<header>
+<h2>🌌 Cosmic Hub</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+<button onclick="toggleTheme()" class="btn">🌙 Mode</button>
+</header>
+<section class="hero" id="home">
+<h1 class="typing">Explore The Universe Of Knowledge 🚀</h1>
+<button class="btn" onclick="welcome()">Start Learning</button>
+</section>
+<section id="about">
+<h2>About</h2>
+<div class="card">
+Cosmic Knowledge Hub is a futuristic learning platform using
+HTML5, CSS3, JavaScript, animations and modern UI design.
+</div>
+<div>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JS</span>
+<span class="skill">UI/UX</span>
+<span class="skill">Animations</span>
+</div>
+</section>
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card">
+<h3>Galaxy App</h3>
+<p>Space learning system</p>
+</div>
+<div class="card">
+<h3>AI Hub</h3>
+<p>Artificial Intelligence platform</p>
+</div>
+<div class="card">
+<h3>Space Research</h3>
+<p>Astronomy dashboard</p>
+</div>
+</div>
+<h2>Students Connected</h2>
+<div class="counter" id="counter">0</div>
+</section>
+<section id="contact">
+    <div class="card contact-card">
+        <h2>Contact Us</h2>
+        <input type="text" placeholder="Enter Your Name">
+        <input type="email" placeholder="Enter Your Email">
+        <textarea placeholder="Enter Your Message"></textarea>
+        <button class="btn">Send Message</button>
+    </div>
+</section>
+<footer>
+© 2026 Cosmic Knowledge Hub | FSD Internship Project
+</footer>
+<script>
+function welcome(){
+  alert("🚀 Welcome to Cosmic Knowledge Hub!");
+}
+
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+}
+
+let count = 0;
+let target = 3000;
+
+let interval = setInterval(()=>{
+  count += 20;
+  document.getElementById("counter").innerText = count + "+";
+  if(count >= target){
+    clearInterval(interval);
+  }
+},30);
+</script>
+</body>
+</html>
