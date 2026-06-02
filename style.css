@@ -1,0 +1,234 @@
+:root{
+  --bg1:#0f172a;
+  --bg2:#1e293b;
+  --primary:#00e5ff;
+  --secondary:#00ff95;
+  --pink:#ff4fd8;
+  --purple:#8b5cf6;
+  --yellow:#ffd700;
+  --text:#ffffff;
+  --glass:rgba(255,255,255,0.12);
+}
+/* CONTACT SECTION */
+#contact{
+    padding:80px 20px;
+}
+
+.contact-card{
+    max-width:700px;
+    margin:0 auto;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
+
+.contact-card h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.contact-card input,
+.contact-card textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-card textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.contact-card .btn{
+    display:block;
+    margin:10px auto 0;
+    min-width:180px;
+}
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI;
+}
+
+/* BACKGROUND */
+body{
+  color:var(--text);
+  background:linear-gradient(-45deg,#00e5ff,#8b5cf6,#00ff95,#ff4fd8);
+  background-size:400% 400%;
+  animation:gradient 12s ease infinite;
+  overflow-x:hidden;
+}
+
+@keyframes gradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* FLOATING STARS */
+.stars{
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(white 1px,transparent 1px);
+  background-size:40px 40px;
+  animation:moveStars 60s linear infinite;
+  z-index:-1;
+}
+
+@keyframes moveStars{
+  from{transform:translateY(0);}
+  to{transform:translateY(-500px);}
+}
+
+/* PLANETS */
+.planet{
+  position:fixed;
+  border-radius:50%;
+  opacity:0.6;
+  animation:float 8s infinite ease-in-out;
+  z-index:-1;
+}
+
+.p1{
+  width:120px;
+  height:120px;
+  background:#00e5ff;
+  top:10%;
+  left:5%;
+}
+
+.p2{
+  width:90px;
+  height:90px;
+  background:#ff4fd8;
+  bottom:15%;
+  right:5%;
+}
+
+@keyframes float{
+  50%{transform:translateY(-30px);}
+}
+
+/* HEADER */
+header{
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.2);
+  backdrop-filter:blur(10px);
+}
+
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.typing{
+  font-size:35px;
+  border-right:3px solid white;
+  white-space:nowrap;
+  overflow:hidden;
+  width:0;
+  animation:typing 4s steps(40,end) forwards, blink .7s infinite;
+}
+
+@keyframes typing{
+  from{width:0;}
+  to{width:100%;}
+}
+
+@keyframes blink{
+  50%{border-color:transparent;}
+}
+
+/* BUTTON */
+.btn{
+  margin-top:20px;
+  padding:15px 30px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#00e5ff,#00ff95,#ff4fd8);
+  color:white;
+  cursor:pointer;
+  font-size:18px;
+  box-shadow:0 0 20px #00e5ff;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+}
+
+/* GLASS CARDS */
+section{
+  padding:60px 10%;
+}
+
+.card{
+  background:var(--glass);
+  padding:25px;
+  border-radius:20px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 0 25px rgba(0,255,255,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* SKILLS */
+.skill{
+  display:inline-block;
+  padding:8px 15px;
+  margin:5px;
+  border-radius:20px;
+  background:#00ff95;
+  color:black;
+  font-weight:bold;
+}
+
+/* COUNTER */
+.counter{
+  font-size:60px;
+  text-align:center;
+  color:#ffd700;
+}
+
+/* DARK MODE */
+.dark{
+  --text:#000;
+  background:#e0f7fa;
+  color:#000;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.3);
+}
